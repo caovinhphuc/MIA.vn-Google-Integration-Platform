@@ -32,7 +32,7 @@ npm run health-check
 - Username: `user` / Password: `user123` (Regular User)
 - Username: `demo` / Password: `demo123` (Demo User) tự động hóa Google Services chuyên nghiệp**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/mia-vn/google-integration)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node.js-18.0+-green.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/react-19.1.1-blue.svg)](https://reactjs.org/)
@@ -72,7 +72,7 @@ npm run health-check
 
 ```bash
 # Clone repository
-git clone https://github.com/LauCaKeo/MIA.vn-Google-Integration-Platform.git
+git clone https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git
 cd MIA.vn-Google-Integration-Platform
 
 # Cài đặt dependencies
@@ -387,7 +387,7 @@ tail -f /var/log/nginx/access.log
 1. **Check logs**: `tail -f logs/application.log`
 2. **Run health checks**: `curl http://localhost:3000/health`
 3. **Review documentation**: [docs/](docs/)
-4. **Check issues**: [GitHub Issues](https://github.com/mia-vn/google-integration/issues)
+4. **Check issues**: [GitHub Issues](https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform/issues)
 5. **Contact support**: <support@mia-vn.com>
 
 ### Useful Commands
