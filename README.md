@@ -71,9 +71,12 @@ npm run health-check
 ### 1. Cài Đặt
 
 ```bash
-# Clone repository
-git clone https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git
+# Clone repository (SSH recommended)
+git clone git@github.com:caovinhphuc/MIA.vn-Google-Integration-Platform.git
 cd MIA.vn-Google-Integration-Platform
+
+# Or clone with HTTPS
+# git clone https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git
 
 # Cài đặt dependencies
 npm install

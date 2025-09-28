@@ -13,7 +13,7 @@ git remote -v
 
 echo ""
 echo "📤 Pushing to new repository..."
-echo "Repository: https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git"
+echo "Repository: git@github.com:caovinhphuc/MIA.vn-Google-Integration-Platform.git"
 echo ""
 
 # Push to new repository
@@ -25,7 +25,8 @@ if [ $? -eq 0 ]; then
     echo ""
     echo "🔗 Repository URLs:"
     echo "   - GitHub: https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform"
-    echo "   - Clone: git clone https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git"
+    echo "   - SSH Clone: git clone git@github.com:caovinhphuc/MIA.vn-Google-Integration-Platform.git"
+    echo "   - HTTPS Clone: git clone https://github.com/caovinhphuc/MIA.vn-Google-Integration-Platform.git"
     echo ""
     echo "🚀 Next Steps:"
     echo "   1. Check GitHub repository"
