@@ -68,7 +68,32 @@ npm run health-check
 
 ## 🚀 Quick Start
 
-### 1. Cài Đặt
+### 🎯 Easy Startup (Recommended)
+
+**For macOS/Linux:**
+
+```bash
+# Super quick start - everything automated
+./quick-start.sh
+
+# Or interactive mode with options
+./start-project.sh
+
+# Or command line mode
+./start-project.sh dev        # Start development
+./start-project.sh build      # Build production
+./start-project.sh test       # Run tests
+./start-project.sh setup      # Setup only
+```
+
+**For Windows:**
+
+```batch
+# Double-click or run in Command Prompt
+start-project.bat
+```
+
+### 1. Manual Installation
 
 ```bash
 # Clone repository (SSH recommended)

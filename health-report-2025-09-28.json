@@ -1,68 +1,99 @@
 {
-  "timestamp": "2025-09-28T17:49:55.133Z",
-  "overall": "degraded",
+  "timestamp": "2025-09-28T20:25:23.902Z",
+  "overall": "unhealthy",
   "services": {
     "file-system": {
       "status": "healthy",
       "message": "All required files and directories present",
       "details": null,
-      "timestamp": "2025-09-28T17:49:55.134Z"
+      "timestamp": "2025-09-28T20:25:23.902Z"
     },
     "dependencies": {
       "status": "healthy",
       "message": "All critical dependencies present",
       "details": null,
-      "timestamp": "2025-09-28T17:49:55.134Z"
+      "timestamp": "2025-09-28T20:25:23.903Z"
     },
     "environment": {
-      "status": "warning",
-      "message": "Missing optional environment variables: SMTP_USER, SMTP_PASS",
+      "status": "healthy",
+      "message": "All environment variables configured",
       "details": null,
-      "timestamp": "2025-09-28T17:49:55.134Z"
+      "timestamp": "2025-09-28T20:25:23.903Z"
     },
     "google-sheets": {
-      "status": "healthy",
-      "message": "Connected to Google Sheets: \"mia-logistics-final\"",
+      "status": "error",
+      "message": "Google Sheets API connection failed: error:1E08010C:DECODER routines::unsupported",
       "details": {
-        "sheetId": "18B1PIhCDmBWyHZytvOcfj_1QbYBwczLf1x1Qbu0E5As",
-        "title": "mia-logistics-final",
-        "sheetsCount": 22
+        "error": "error:1E08010C:DECODER routines::unsupported",
+        "code": "ERR_OSSL_UNSUPPORTED"
       },
-      "timestamp": "2025-09-28T17:49:56.492Z"
+      "timestamp": "2025-09-28T20:25:24.408Z"
     },
     "google-drive": {
-      "status": "healthy",
-      "message": "Connected to Google Drive: mia-logistics-service@mia-logistics-469406.iam.gserviceaccount.com",
+      "status": "error",
+      "message": "Google Drive API connection failed: error:1E08010C:DECODER routines::unsupported",
       "details": {
-        "user": "mia-logistics-service@mia-logistics-469406.iam.gserviceaccount.com",
-        "email": "mia-logistics-service@mia-logistics-469406.iam.gserviceaccount.com"
+        "error": "error:1E08010C:DECODER routines::unsupported",
+        "code": "ERR_OSSL_UNSUPPORTED"
       },
-      "timestamp": "2025-09-28T17:49:57.078Z"
+      "timestamp": "2025-09-28T20:25:24.409Z"
     },
     "email-service": {
-      "status": "healthy",
-      "message": "SendGrid API connection successful",
+      "status": "error",
+      "message": "SMTP connection failed: nodemailer.createTransporter is not a function",
       "details": {
-        "service": "SendGrid"
+        "error": "nodemailer.createTransporter is not a function"
       },
-      "timestamp": "2025-09-28T17:49:57.628Z"
+      "timestamp": "2025-09-28T20:25:25.042Z"
     },
     "telegram-service": {
-      "status": "healthy",
-      "message": "Telegram bot connected: mia-logistics-manager",
+      "status": "error",
+      "message": "Telegram service connection failed: Request failed with status code 404",
       "details": {
-        "botName": "mia-logistics-manager",
-        "username": "mia_logistics_manager_bot"
+        "error": "Request failed with status code 404"
       },
-      "timestamp": "2025-09-28T17:49:58.257Z"
+      "timestamp": "2025-09-28T20:25:25.728Z"
     }
   },
-  "errors": [],
+  "errors": [
+    {
+      "service": "google-sheets",
+      "message": "Google Sheets API connection failed: error:1E08010C:DECODER routines::unsupported",
+      "details": {
+        "error": "error:1E08010C:DECODER routines::unsupported",
+        "code": "ERR_OSSL_UNSUPPORTED"
+      }
+    },
+    {
+      "service": "google-drive",
+      "message": "Google Drive API connection failed: error:1E08010C:DECODER routines::unsupported",
+      "details": {
+        "error": "error:1E08010C:DECODER routines::unsupported",
+        "code": "ERR_OSSL_UNSUPPORTED"
+      }
+    },
+    {
+      "service": "email-service",
+      "message": "SMTP connection failed: nodemailer.createTransporter is not a function",
+      "details": {
+        "error": "nodemailer.createTransporter is not a function"
+      }
+    },
+    {
+      "service": "telegram-service",
+      "message": "Telegram service connection failed: Request failed with status code 404",
+      "details": {
+        "error": "Request failed with status code 404"
+      }
+    }
+  ],
   "warnings": [
     {
-      "service": "environment",
-      "message": "Missing optional environment variables: SMTP_USER, SMTP_PASS",
-      "details": null
+      "service": "email-service",
+      "message": "SendGrid API failed: Request failed with status code 401, trying SMTP fallback",
+      "details": {
+        "error": "Request failed with status code 401"
+      }
     }
   ]
 }
